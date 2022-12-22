@@ -20,20 +20,81 @@ namespace BasicCalculator
     /// </summary>
     public partial class MainWindow : Window
     {
+        int num1, num2;
+        int ans;
+        char operation;
         public MainWindow()
         {
             InitializeComponent();
         }
-
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            Button btn = (Button)sender;
+            result.Text = btn.Content.ToString();
+            num2 = Int32.Parse(result.Text);
+        }
+        private void divide_Click(object sender, RoutedEventArgs e)
+        {
+            num1 = Int32.Parse(result.Text);
+            operation = '/';
+            result.Clear();
+        }
+
+        private void multiply_Click(object sender, RoutedEventArgs e)
+        {
+            num1 = Int32.Parse(result.Text);
+            operation = '*';
+            result.Clear();
+        }
+
+        private void minus_Click(object sender, RoutedEventArgs e)
+        {
+            num1 = Int32.Parse(result.Text);
+            operation = '-';
+            result.Clear();
+        }
+
+        private void plus_Click(object sender, RoutedEventArgs e)
+        {
+            num1 = Int32.Parse(result.Text);
+            operation = '+';
+            result.Clear();
+        }
+
+        private void clear_Click(object sender, RoutedEventArgs e)
+        {
+            result.Clear();
+        }
+
+        private void equals_Click(object sender, RoutedEventArgs e)
+        {
+            num2 = Int32.Parse(result.Text);
+            ans = 0;
+            if (operation == '+')
+            {
+                ans = num1 + num2;
+            }
+            else if (operation == '-')
+            {
+                ans = num1 - num2;
+            }
+            else if (operation == '*')
+            {
+                ans = num1 * num2;
+            }
+            else if (operation == '/')
+            {
+                ans = num1 / num2;
+            }
+            else if (operation == '0')
+            {
+                result.Clear();
+            }
+            result.Text = ans.ToString();
 
         }
-         
+
+       
+
     }
 }

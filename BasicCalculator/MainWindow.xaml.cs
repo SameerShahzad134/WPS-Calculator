@@ -21,7 +21,7 @@ namespace BasicCalculator
     public partial class MainWindow : Window
     {
         int num1, num2;
-        int ans;
+        double ans;
         char operation;
         public MainWindow()
         {

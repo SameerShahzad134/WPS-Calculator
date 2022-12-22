@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:BasicCalculator"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid HorizontalAlignment="Left" Height="413" Margin="10,0,0,0" VerticalAlignment="Top" Width="790">
+    <Grid HorizontalAlignment="Left" Height="413" Margin="10,0,0,0" VerticalAlignment="Top" Width="790" Background="#FF3D939C">
         <TextBox x:Name="result" HorizontalAlignment="Left" Height="84" Margin="10,10,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="411" FontSize="20"/>
         <Button Content="7" HorizontalAlignment="Left" Margin="10,116,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.022,-0.14" Height="45" Width="99" Click="Button_Click"/>
         <Button Content="8" HorizontalAlignment="Left" Margin="114,116,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.022,-0.14" Height="45" Width="99" Click="Button_Click"/>
